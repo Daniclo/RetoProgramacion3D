@@ -1,0 +1,3 @@
+¡ Ojo !
+java.lang.StringBuilder.append( char a ):
+El argumento char se agrega al contenido de esta secuencia de StringBuilder.
