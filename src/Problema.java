@@ -109,7 +109,8 @@ public class Problema {
                     for (int c=0;c<letras.size();c++){
                         if (letras.containsKey(caracterClave)){
                             int ascii = (caracterMensaje.charAt(0) + letras.get(caracterClave));
-                            //System.out.println(caracterMensaje.charAt(0) + " " + letras.get(caracterClave));
+                            //No hemos conseguido que aplicar el %26, daba error. Por lo demás, funciona correctamente
+                            //pero cuando el valor supera la letra Z, saca caracteres especiales no deseados.
                             char caracter = (char) ascii;
                             sb.append(caracter);
                             break;
@@ -117,9 +118,6 @@ public class Problema {
                     }
                     contadorCifrado++;
                 }
-
-
-
 
                 bw.write(sb.toString()); /* Escribe la cadena de caracteres en el fichero*/
                 bw.newLine(); /* escribe nueva línea en el fichero */
